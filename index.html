@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy clipboard</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div id="app-root"></div>
+
+    <script type="text/javascript">
+      var assets = document.createElement('SCRIPT');
+      var src = 'assets/app.bundle.js';
+
+      if (typeof process.env.ENVIRONMENT !== 'undefined' && 'DEV' === process.env.ENVIRONMENT) {
+        src = 'http://localhost:8080/assets/app.bundle.js';
+      }
+
+      assets.src = src;
+      document.body.appendChild(assets);
+
+        require('./src/renderer/clipboard')
+    </script>
+</body>
+</html>

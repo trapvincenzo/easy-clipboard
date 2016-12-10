@@ -1,0 +1,50 @@
+body {
+  background-color: #ffffe0;
+}
+
+#add-from-clipboard {
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+#discard-btn {
+  margin-left: 5px;
+}
+
+.saved-list {
+  margin-top: 30px;
+  position: relative;
+}
+
+.copied-message {
+  font-size: 11px;
+  margin-right: 2px;
+  display: none;
+  color: #999;
+}
+
+.copy-item {
+  cursor: pointer;
+  font-size: 21px;
+}
+
+.show-item {
+  margin-left: 5px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.preview-item {
+  display: none;
+  margin-top: 10px;
+}
+
+footer {
+  a {
+    color: #222;
+    font-weight: bold;
+  }
+  text-align: center;
+  font-size: 11px;
+}

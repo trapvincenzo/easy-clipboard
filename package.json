@@ -1,0 +1,59 @@
+{
+  "name": "easy-clipboard",
+  "author": "Vincenzo Trapani <trapvincenzo@gmail.com>",
+  "description": "Small menubar app where to save your clipboard entries",
+  "version": "0.1.0",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "electron-builder": "^10.6.1",
+    "electron-packager": "^8.4.0",
+    "electron-prebuilt": "^1.4.12",
+    "eslint": "^3.12.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-react": "^6.8.0",
+    "moment": "^2.15.2",
+    "node-sass": "^3.13.0",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.24",
+    "webpack-dev-server": "2.1.0-beta.10"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.1",
+    "bower": "^1.8.0",
+    "css-loader": "^0.26.0",
+    "electron-config": "^0.2.1",
+    "menubar": "^5.1.0",
+    "node-sass": "^3.13.0",
+    "postcss-loader": "^1.1.1",
+    "randomstring": "^1.1.5",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-electron-ipc": "^1.1.3",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
+  },
+  "build": {
+    "appId": "com.trapvincenzo.easyclipboard",
+    "mac": {
+      "category": "fun"
+    }
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "dev": "./node_modules/.bin/webpack-dev-server & ENVIRONMENT=DEV electron .",
+    "start": "electron .",
+    "pack": "node_modules/.bin/build --dir",
+    "dist": "node_modules/.bin/webpack -p && node_modules/.bin/build",
+    "watch": "./node_modules/.bin/webpack-dev-server --hot --inline"
+  }
+}
